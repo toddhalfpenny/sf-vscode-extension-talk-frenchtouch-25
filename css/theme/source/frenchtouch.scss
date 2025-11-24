@@ -479,6 +479,15 @@ ul.qanda {
     }
 }
 
+.reveal .is {
+    h2 {
+        margin-top: 1em;
+    }
+    .isDiv :is(h2, h3, h4, p, li) {
+        color: #896A31;
+    }
+}
+
 
 
 .marker1 {   // marker
@@ -507,3 +516,75 @@ ul.qanda {
         font-weight: bold;
     }
 }
+
+
+.reveal .marker3 {   // marker counter
+    counter-reset: h3;
+
+    h3 {
+        counter-increment: h3;
+        display: list-item;
+        list-style-position: inside;
+    }
+    
+    h3::marker {
+        display: list-item;
+        content: "#" counter(h3) " ";
+        color: #896A31;
+        font-weight: bold;
+    }
+}
+
+
+.siblingcounter li {
+    opacity: 0;
+}
+
+.start-animation  ul li {
+  animation: reveal 0.6s ease-out forwards;
+  animation-delay: calc(sibling-index() * 0.5s);
+}
+
+@keyframes reveal {
+    from {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  /**
+  * user-invalid
+  */
+  .user-invalid {
+    .error {
+        color: red;
+        display: none;
+        font-weight: bold;
+      }
+    input {
+        font-size: 1em;
+    }
+  }
+
+  .user-invalid .invalid:has(input:invalid) {
+    input {
+        outline: 3px dashed red;
+    }
+    .error {
+      display: inline;
+    }
+  }
+
+  .user-invalid .user-invalid:has(input:user-invalid) {
+    input {
+        outline: 3px dashed red;
+    }
+    .error {
+      display: inline;
+    }
+  }

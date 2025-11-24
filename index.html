@@ -166,6 +166,44 @@
 
 
 
+
+				<!-- 
+					===========================================================
+					is
+				-->
+				<section class="is has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+					<div class="cols-2">
+						<div class="isDiv">
+							<h1>is()</h1>
+							<h2>An h2</h2>
+							<h3>An h3</h3>
+							<h4>An h4</h4>
+							<p>A paragraph</p>
+							<ul>
+								<li class="fragment custom ftd25">Demo LOADS of CSS</li>
+							</ul>
+						</div>
+						<div>
+							<pre><code>
+<ul>
+	<li>Demo LOADS of CSS</li>
+	<li class="active">Selectors</li>
+	<li>Text bits</li>
+	<li>Not-so-strictly-css</li>
+	<li>View and Scroll</li>
+	<li class="fragment">Q&amp;A</li>
+</ul>
+							</code></pre>
+						</div>
+					</div>
+					<aside class="notes">
+						<ul>
+							<li></li>
+						</ul>
+					</aside>
+				</section>
+
+
 				<!-- 
 					===========================================================
 					marker1
@@ -233,6 +271,111 @@
 	<li class="fragment">Q&amp;A</li>
 </ul>
 							</code></pre>
+						</div>
+					</div>
+					<aside class="notes">
+						<ul>
+							<li></li>
+						</ul>
+					</aside>
+				</section>
+
+
+
+				<!-- 
+					===========================================================
+					marker3
+				-->
+				<section class="marker3 has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+					<div class="cols-2">
+						<div class="agenda">
+							<h1>Marker + Counter</h1>
+							<div class="fragment">
+								<h3>Nesting</h3>
+								<p>We spoke about various ways to nest</p>
+							</div>
+							<div class="fragment">
+								<h3>is() &amp; :has()</h3>
+								<p>Powerful selectors</p>
+							</div>
+							<div class="fragment">
+								<h3>::marker &amp; counter()</h3>
+								<p>More powerful stuff</p>
+							</div>
+						</div>
+						<div>
+							<pre><code>
+<ul>
+	<li>Demo LOADS of CSS</li>
+	<li class="active">Selectors</li>
+	<li>Text bits</li>
+	<li>Not-so-strictly-css</li>
+	<li>View and Scroll</li>
+	<li class="fragment">Q&amp;A</li>
+</ul>
+							</code></pre>
+						</div>
+					</div>
+					<aside class="notes">
+						<ul>
+							<li></li>
+						</ul>
+					</aside>
+				</section>
+
+
+
+				<!-- 
+					===========================================================
+					siblingcounter
+				-->
+				<section class="siblingcounter has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+					<div class="cols-2">
+						<div class="agenda">
+							<h1>Agenda</h1>
+							<ul>
+								<li class="ftd25">Demo LOADS of CSS</li>
+								<li class="fragment custom ftd25">Selectors</li>
+								<li class="ftd25">Text bits</li>
+								<li class="ftd25">Not-so-strictly-css</li>
+								<li class="ftd25">View and Scroll</li>
+								<li class="ftd25">Q&amp;A</li>
+							</ul>
+						</div>
+						<div>
+
+						</div>
+					</div>
+					<aside class="notes">
+						<ul>
+							<li></li>
+						</ul>
+					</aside>
+				</section>
+
+
+
+				<!-- 
+					===========================================================
+					user-invalid
+				-->
+				<section class="user-invalid has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+					<h1>Better invalids?</h1>
+					&nbsp;
+					<div class="cols-2">
+						<div class="invalid agenda fragment">
+							<label for="email">Enter your test.com email:</label>
+							<input type="email" id="email" pattern=".+@test\.com" size="30" required />
+							<span id="email-address-error" class="error">
+								🚨 This email address is invalid. 🚨
+							</span>
+						</div>
+						<div class="user-invalid agenda fragment">
+							<label for="email">Enter your test.com email:</label>
+							<input type="email" id="email" pattern=".+@test\.com" size="30" required />
+							<span id="email-address-error" class="error">
+								🚨 This email address is invalid. 🚨
+							</span>
 						</div>
 					</div>
 					<aside class="notes">
@@ -359,6 +502,11 @@ data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)" >
 						el.classList.remove('slide-title');
 					};
 				}
+				if (event.currentSlide.className.includes('siblingcounter')) {
+					startAnimation();
+				} else {
+					removeAnimation();
+				}
 			} );
 
 			function hideFooter() {
@@ -399,6 +547,15 @@ data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)" >
 				console.log('hideBackground');
 				let el = document.getElementById('slides');
 				el.classList.add("hide-background");
+			}
+
+			function startAnimation() {
+				let el = document.getElementById('slides');
+				el.classList.add("start-animation");
+			}
+			function removeAnimation() {
+				let el = document.getElementById('slides');
+				el.classList.remove("start-animation");
 			}
 		</script>
 	</body>
