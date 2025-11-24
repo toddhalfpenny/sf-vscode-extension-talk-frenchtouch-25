@@ -1,7 +1,7 @@
 {
   "name": "reveal.js",
   "version": "5.1.0",
-  "description": "The HTML Presentation Framework",
+  "description": "The top modern CSS features every dev needs to know - ReveaJS",
   "homepage": "https://revealjs.com",
   "subdomain": "revealjs",
   "main": "dist/reveal.js",

@@ -444,3 +444,66 @@ ul.qanda {
 //  max-width: 100%;
 //  max-height: 82px;
 }
+
+
+/**
+ ALL MY DEMO CODE
+*/
+
+/**
+ SELECTORS
+*/
+
+// NESTING
+
+.reveal section .agenda ul {
+    list-style-type: disc;
+} 
+
+.nesting1 {   // basic nesting
+    .agenda {
+        font-style: italic;
+        .current-fragment {
+            font-weight: bold;
+        }
+    }
+}
+
+
+.nesting2 {   // & nesting
+    .agenda li {
+        font-style: italic;
+        &.current-fragment {
+            font-weight: bold;
+        }
+    }
+}
+
+
+
+.marker1 {   // marker
+    .agenda li {
+        font-style: italic;
+    }
+    li::marker {
+        color: red;
+    }
+    li.current-fragment {
+        font-weight: bold;
+    }
+}
+
+
+
+
+.marker2 {   // marker content
+    .agenda li {
+        font-style: italic;
+    }
+    li::marker {
+        content: "🧡 ";
+    }
+    li.current-fragment {
+        font-weight: bold;
+    }
+}
