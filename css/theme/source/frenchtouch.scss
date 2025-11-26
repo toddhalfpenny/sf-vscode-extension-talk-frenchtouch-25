@@ -563,8 +563,10 @@ ul.qanda {
   .user-invalid {
     .error {
         color: red;
-        display: none;
+        // display: none;
         font-weight: bold;
+        height: 1.5em;
+        visibility: hidden;
       }
     input {
         font-size: 1em;
@@ -577,6 +579,7 @@ ul.qanda {
     }
     .error {
       display: inline;
+      visibility:visible;
     }
   }
 
@@ -586,5 +589,58 @@ ul.qanda {
     }
     .error {
       display: inline;
+      visibility:visible;
+    }
+  }
+
+  .accent-color1 {
+    fieldset {
+        // backdrop-filter: blur(20px);
+        background: rgb(137 106 49 / 10%);
+        backdrop-filter: blur(5px);
+        
+        border: 10px solid #896A31;
+        border-radius: 1em;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        margin: 1em 0;
+    }
+    fieldset:first-of-type {
+        margin-top: 0;
+    }
+    #fieldset-range {
+        padding-left: 3em;
+        label {
+            margin-left: 3em;
+        }
+        legend {
+            margin-left: -2.5em;
+        }
+    }
+    legend {
+        margin-left: 0.5em;
+    }
+    input[type=checkbox],
+    input[type=radio],
+    input[type=range] {
+        font-size: 1em;
+        transform: scale(4);
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        top: -10px;
+        position: relative;
+    }
+    .row.accent {
+        visibility: hidden;
+        &.current-fragment {
+            visibility: visible;
+        }
+    }
+    
+    .accent :is(input, progress) {
+        accent-color: rgb(137 106 49);
     }
   }

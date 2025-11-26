@@ -369,6 +369,16 @@
 							<span id="email-address-error" class="error">
 								🚨 This email address is invalid. 🚨
 							</span>
+							<pre><code>
+div:has(:invalid) {
+	input {
+		outline: 3px dashed red;
+	}
+	.error {
+		display: inline;
+	}
+}
+</code></pre>
 						</div>
 						<div class="user-invalid agenda fragment">
 							<label for="email">Enter your test.com email:</label>
@@ -376,6 +386,16 @@
 							<span id="email-address-error" class="error">
 								🚨 This email address is invalid. 🚨
 							</span>
+							<pre><code>
+div:has(:user-invalid) {
+	input {
+		outline: 3px dashed red;
+	}
+	.error {
+		display: inline;
+	}
+}
+</code></pre>
 						</div>
 					</div>
 					<aside class="notes">
@@ -386,6 +406,92 @@
 				</section>
 
 				
+
+
+
+				<!-- 
+					===========================================================
+					accent-color1
+				-->
+				<section class="accent-color1 has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+					<h1>Styling Forms 🤬</h1>
+					&nbsp;
+					<div class="cols-2">
+						<div class="">
+							<fieldset>
+								<legend>Checkboxes</legend>
+								<div class="row">
+									<input id="checkbox1" type="checkbox" checked>
+									<label for="checkbox1">
+										Default
+									</label>
+								</div>
+								<div class="row fragment custom accent" data-fragment-index="1">
+									<input id="checkbox2" type="checkbox">
+									<label for="checkbox2">
+										Accent
+									</label>
+								</div>
+							</fieldset>
+						
+							<fieldset>
+								<legend>Radio</legend>
+								<div class="row">
+									<input name="radio" id="radio1" type="radio" checked>
+									<label for="radio">
+										Default
+									</label>
+								</div>
+								<div class="row fragment custom accent" data-fragment-index="1">
+									<input name="radio" id="radio2" type="radio" class="accent">
+									<label for="radio">
+										Accent
+									</label>
+								</div>
+							</fieldset>
+						</div>
+						<div class="">
+							<fieldset>
+								<legend>Progress</legend>
+								<div class="row">
+									<progress id="progress" class="accent" min="0" max="100" value="33"></progress>
+									<label for="progress">
+										Default
+									</label>
+								</div>
+								<div class="row fragment custom accent" data-fragment-index="1">
+									<progress id="progress-accent" class="accent" min="0" max="100" value="33"></progress>
+									<label for="progress-accent">
+										Accent
+									</label>
+								</div>
+							</fieldset>
+						
+							<fieldset id="fieldset-range">
+								<legend>Range</legend>
+								<div class="row">									
+									<input id="range" type="range">
+									<label for="range">
+										Accent
+									</label>
+								</div>
+								<div class="row fragment custom accent" data-fragment-index="1">									
+									<input id="range-accent" type="range">
+									<label for="range-accent">
+										Accent
+									</label>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+					<aside class="notes">
+						<ul>
+							<li></li>
+						</ul>
+					</aside>
+				</section>
+
+
 				<!-- 
 					===========================================================
 					NOT DOING THIS ALONE
