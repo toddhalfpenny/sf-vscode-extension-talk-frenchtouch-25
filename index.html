@@ -472,7 +472,7 @@ div:has(:user-invalid) {
 								<div class="row">									
 									<input id="range" type="range">
 									<label for="range">
-										Accent
+										Default
 									</label>
 								</div>
 								<div class="row fragment custom accent" data-fragment-index="1">									
@@ -482,6 +482,65 @@ div:has(:user-invalid) {
 									</label>
 								</div>
 							</fieldset>
+						</div>
+					</div>
+					<aside class="notes">
+						<ul>
+							<li></li>
+						</ul>
+					</aside>
+				</section>
+
+				
+
+				<!-- 
+					===========================================================
+					property1
+				-->
+				<section class="property1 has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+					<h1>@Property</h1>
+					<focus-zoom></focus-zoom>
+					<div class="cols-2">
+						<div class="">
+
+						</div>
+					</div>
+					<aside class="notes">
+						<ul>
+							<li></li>
+						</ul>
+					</aside>
+				</section>
+
+				
+
+
+
+				<!-- 
+					===========================================================
+					textwrap-1
+				-->
+				<section class="textwrap-1 has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+					<h1>text-wrap</h1>
+					&nbsp;
+					<div class="cols-3">
+						<div class="standard">
+							<h2>Default</h2>
+							<h3>The top modern CSS features every dev needs to know</h3>
+							<p>So far so good... we've seen a lot, but I hope you're taking in just how much CSS has come along.</p>
+							<p>There is a lot on offer, and it's time we started making use of it and love it.</p>
+						</div>
+						<div class="fragment balance">
+							<h2>Balance</h2>
+							<h3>The top modern CSS features every dev needs to know</h3>
+							<p>So far so good... we've seen a lot, but I hope you're taking in just how much CSS has come along.</p>
+							<p>There is a lot on offer, and it's time we started making use of it and love it.</p>
+						</div>
+						<div class="fragment pretty">
+							<h2>Pretty</h2>
+							<h3>The top modern CSS features every dev needs to know</h3>
+							<p>So far so good... we've seen a lot, but I hope you're taking in just how much CSS has come along.</p>
+							<p>There is a lot on offer, and it's time we started making use of it and love it.</p>
 						</div>
 					</div>
 					<aside class="notes">
@@ -663,6 +722,28 @@ data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)" >
 				let el = document.getElementById('slides');
 				el.classList.remove("start-animation");
 			}
+
+			const zoom = document.querySelector('focus-zoom')
+
+			const toggleSpotlight = bool =>
+				zoom.style.setProperty('--focal-size', 
+					bool
+						? '8vmax'
+						: '100%')
+
+			window.addEventListener('pointermove', e => {
+				zoom.style.setProperty('--mouse-x', e.clientX + 'px')
+				zoom.style.setProperty('--mouse-y', e.clientY + 'px')
+			})
+
+			window.addEventListener('keydown', e =>
+				toggleSpotlight(e.altKey))
+			window.addEventListener('keyup', e =>
+				toggleSpotlight(e.altKey))
+			window.addEventListener('touchstart', e =>
+				toggleSpotlight(true))
+			window.addEventListener('touchend', e =>
+				toggleSpotlight(false))
 		</script>
 	</body>
 </html>
