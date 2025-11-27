@@ -598,7 +598,27 @@ input {
 }
 }
 
-.accent-color1 {
+
+/**
+* accent-color1
+*/
+.field-sizing div > * {
+    input, select{
+        font-size:63px;
+        outline: 1px solid #896A31;
+    }
+    option {
+        font-size:60px;
+    }
+    .field-sizing-sized :is(input){
+        field-sizing: content;
+        min-inline-size: 20ch;
+    }
+    .field-sizing-sized :is( select, option ){
+        field-sizing: content;
+    }
+}
+
 fieldset {
     // backdrop-filter: blur(20px);
     background: rgb(137 106 49 / 10%);
@@ -616,6 +636,12 @@ fieldset {
 fieldset:first-of-type {
     margin-top: 0;
 }
+
+/**
+* accent-color1
+*/
+.accent-color1 {
+
 #fieldset-range {
     padding-left: 3em;
     label {
@@ -655,35 +681,36 @@ input[type=range] {
     syntax: '<length-percentage>';
     initial-value: 100%;
     inherits: false;
-  }
+}
   
-  focus-zoom {
+focus-zoom {
     --mouse-x: center;
     --mouse-y: center;
     --backdrop-color: hsl(200 50% 0% / 50%); /* can't be opaque */
     --backdrop-blur-strength: 10px;
-    
+
     position: fixed;
     touch-action: none;
     inset: 0;
     background-color: var(--backdrop-color);
     backdrop-filter: blur(var(--backdrop-blur-strength));
-    
+
     mask-image: radial-gradient(
-      circle at var(--mouse-x) var(--mouse-y), 
-      transparent var(--focal-size), 
-      black 0%
+        circle at var(--mouse-x) var(--mouse-y), 
+        transparent var(--focal-size), 
+        black 0%
     );
-    
+
     transition: --focal-size .3s ease;
-    
+    z-index: var(--z-index);
+
     /*  debug/grok the gradient mask image here   */
-  /*   background-image: radial-gradient(
-      circle, 
-      transparent 100px, 
-      black 0%
+    /*   background-image: radial-gradient(
+        circle, 
+        transparent 100px, 
+        black 0%
     ); */
-  }
+}
 
   .textwrap-1 {
     div div {

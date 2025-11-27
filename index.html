@@ -18,6 +18,7 @@
 	<body>
 		<div class="reveal">
 			<div id="slides" class="slides">
+
 				<!-- 
 					===========================================================
 					HEADER
@@ -411,6 +412,58 @@ div:has(:user-invalid) {
 
 				<!-- 
 					===========================================================
+					field-sizing
+				-->
+				<section class="field-sizing has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+					<h1>field-sizing</h1>
+					&nbsp;
+					<div class="cols-2">
+						<div class="">
+							<fieldset>
+								<legend>Default</legend>
+								<div class="row">
+									<input id="text1" type="email" placeholder="email input">
+								</div>
+								<div class="row">
+									<select name="select" id="select">
+										<option value="0">Choose something</option>
+										<option value="1">Short</option>
+										<option value="2">Medium length</option>
+										<option value="3">Really (really) extra-long text</option>
+									</select>
+								</div>
+							</fieldset>
+						</div>
+						<div class="">
+							<fieldset class="fragment field-sizing-sized">
+								<legend>Sized</legend>
+								<div class="row">
+										<input id="text2" type="email" placeholder="email input">
+								</div>
+								<div class="row">
+									<select name="select" id="select">
+										<option value="0">Choose something</option>
+										<option value="1">Short</option>
+										<option value="2">Medium length</option>
+										<option value="3">Really (really) extra-long text</option>
+									</select>
+								</div>
+							</fieldset>
+						</div>
+					</div>
+					<aside class="notes">
+						<ul>
+							<li></li>
+						</ul>
+					</aside>
+				</section>
+
+				
+
+
+
+				<!-- 
+					===========================================================
 					accent-color1
 				-->
 				<section class="accent-color1 has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
@@ -499,7 +552,6 @@ div:has(:user-invalid) {
 				-->
 				<section class="property1 has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
 					<h1>@Property</h1>
-					<focus-zoom></focus-zoom>
 					<div class="cols-2">
 						<div class="">
 
@@ -616,6 +668,8 @@ data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)" >
 			</div>
 		</div>
 
+		<focus-zoom></focus-zoom>
+
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
 		<script src="plugin/markdown/markdown.js"></script>
@@ -723,13 +777,20 @@ data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)" >
 				el.classList.remove("start-animation");
 			}
 
-			const zoom = document.querySelector('focus-zoom')
+			const zoom = document.querySelector('focus-zoom');
+			//console.log("zoom", zoom)
 
-			const toggleSpotlight = bool =>
+			const toggleSpotlight = bool => {
+				//console.log("toggleSpotlight");
 				zoom.style.setProperty('--focal-size', 
 					bool
-						? '8vmax'
-						: '100%')
+						? '4rem'
+						: '100%');
+				zoom.style.setProperty('--z-index', 
+					bool ?
+						99999 :
+						0);
+			}
 
 			window.addEventListener('pointermove', e => {
 				zoom.style.setProperty('--mouse-x', e.clientX + 'px')
@@ -745,5 +806,6 @@ data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)" >
 			window.addEventListener('touchend', e =>
 				toggleSpotlight(false))
 		</script>
+
 	</body>
 </html>
