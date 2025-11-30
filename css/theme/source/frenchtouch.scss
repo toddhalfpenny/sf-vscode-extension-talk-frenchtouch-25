@@ -811,19 +811,94 @@ pre.card {
     100% {
         transform: rotate(0deg) scale(0.7);
       }
+  } 
+  
+  @keyframes scale2 {
+    from {
+        transform: scale(0);
+      }
+      to {
+        transform: scale(1);
+      }
   }
 
+//   .scroll-snap {
+//     .vertical-scroll {
+//         scroll-snap-type: y mandatory;
+//     }
+//     .card {
+//         // animation: none;
+//         animation-name: scale1;
+//         margin: 3em 0 4em;
+//         scroll-snap-align: start;
+//     }
+//     .card:nth-of-type(4) {
+//         animation-name: scale;
+//     }
+//   }
+
   .scroll-snap {
-    .vertical-scroll {
-        scroll-snap-type: y mandatory;
+    .horiz-scroll {
+        scroll-snap-type: x mandatory;
+        scroll-timeline-axis: x;
+        display: flex;
+        overflow-x: auto;
+        max-height: 90%;
+        scrollbar-width: none;
     }
     .card {
-        // animation: none;
-        animation-name: scale1;
-        margin: 3em 0 4em;
-        scroll-snap-align: start;
+        animation-name: scale2;
+        display: inline-block;
+        margin: 0em 3em 4em;
+        scroll-snap-align: center;
+        min-width: 1024px;
     }
     .card:nth-of-type(4) {
-        animation-name: scale;
+        // animation-name: scale;
+    }
+  }
+
+
+  .scroll-snap2 {
+    .horiz-scroll {
+        scroll-snap-type: x mandatory;
+        scroll-timeline-axis: x;
+        display: flex;
+        overflow-x: auto;
+        max-height: 90%;
+        scrollbar-width: none;
+        padding: 0 600px;
+    }
+    .card {
+        animation-timeline: view(x);
+        animation-name: snap2;
+        display: inline-block;
+        margin: 0em 1em 1em 1em;
+        scroll-snap-align: center;
+        min-width: 1024px;
+    }
+  }
+
+
+  @keyframes snap2 {
+    0% {
+      opacity: 0;
+      transform:  scale(0);
+    }
+    20% {
+      opacity: 0.2;
+      transform:  scale(0.1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    98% {
+      opacity: 0.2;
+      transform:  scale(0.1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
     }
   }
