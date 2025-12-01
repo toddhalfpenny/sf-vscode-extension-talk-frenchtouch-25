@@ -37,8 +37,9 @@
 					<aside class="notes">
 						<ul>
 							<li>Hullo</li>
-							<li></li>
 							<li>Thank you</li>
+							<li>Not an LWC or Salesforce talk</li>
+							<li>Stick around - accessible, maintainable</li>
 						</ul>
 					</aside>
 				</section>
@@ -55,37 +56,159 @@
 						<li>Salesforce MVP</li>
 						<li>London Dev Group + London's Calling Organiser</li>
 						<li>Founder @ Shirtforce</li>
-						<li>@toddhalfpenny / @toddhalfpenny.com</li>
+						<li>linktr.ee/toddhalfpenny</li>
 					</ul>
 					<img id="todd" src="assets/imgs/todd-mvp.jpg">
+					<img id="linktree" src="assets/imgs/toddhalfpenny-linktree.png">
+					<aside class="notes">
+						<ul>
+							<li>TLDR is I love the Salesforce community</li>
+							<li>and I love the web… heck I even love JS, and I’m here doing a talk on CSS</li>
+						</ul>
+					</aside>
+				</section>
+				
+
+				<!-- 
+					===========================================================
+					WHY1
+				-->
+				<section class="has-footer has-header why1" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+					<h1>Why am I talking about this</h1>
+					<div class="cols-2">
+						<div class="fragment">
+							<img src="assets/imgs/css-is-awesome.jpg">
+							<p style="attribution">Credit: css-tricks.com</p>
+						</div>
+						<div class="fragment">
+							<img src="assets/imgs/css-sweets.jpg">
+						</div>
+					</div>
 					<aside class="notes">
 						<ul>
 							<li></li>
 						</ul>
 					</aside>
 				</section>
+				
+
+				<!-- 
+					===========================================================
+					WHY2
+				-->
+				<section class="has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+					<h1>Why am I talking about this</h1>
+					<div>
+						<img src="assets/imgs/sfben-dev-survey.png">
+						<p>Least confident or skilled in:</p>
+						<p>25.6%: LWC &amp; Front-end development</p>
+						<progress id="progress" class="accent" min="0" max="100" value="25.6"></progress>
+					</div>
+					<aside class="notes">
+						<ul>
+							<li></li>
+						</ul>
+					</aside>
+				</section>
+				
 
 
 				<!-- 
 					===========================================================
 					AGENDA
 				-->
-				<section class="has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
-					<div class="agenda">
-						<h1>Agenda</h1>
-						<ul>
-							<li class="fragment">Demo LOADS of CSS</li>
-							<li class="fragment">Selectors</li>
-							<li class="fragment">Text bits</li>
-							<li class="fragment">Not-so-strictly-css</li>
-							<li class="fragment">View and Scroll</li>
-							<!-- <li class="fragment">Resources</li> -->
-							<li class="fragment">Q&amp;A</li>
-						</ul>
+				<section class="no-nesting has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+						<div class="cols-2 align-center">
+							<div class="agenda">
+							<h1>Agenda</h1>
+							<ul>
+								<li class="fragment custom ftd25">Demo LOADS of CSS</li>
+								<li class="fragment custom ftd25">Selectors</li>
+								<li class="fragment custom ftd25">Attributes</li>
+								<li class="fragment custom ftd25">View and Scroll</li>
+								<li class="fragment custom ftd25">Q&amp;A</li>
+							</ul>
+						</div>
+						<div>
+						</div>
 					</div>
 					<aside class="notes">
 						<ul>
 							<li></li>
+						</ul>
+					</aside>
+				</section>
+				
+
+
+				<!-- 
+					===========================================================
+					AGENDA + code
+				-->
+				<section class="no-nesting has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+						<div class="cols-1-3 align-center">
+							<div class="agenda">
+							<h1>Agenda</h1>
+							<ul>
+								<li>Demos</li>
+								<li class="current-fragment">Selectors</li>
+								<li>Attributes</li>
+								<li>View and Scroll</li>
+								<li>Q&amp;A</li>
+							</ul>
+						</div>
+						<div>
+							<pre><code class="language-html">
+<div class="agenda">
+	<h1>Agenda</h1>
+	<ul>
+		<li>Demos</li>
+		<li class="current">Selectors</li>
+		...
+	</ul>
+</div>
+							</code></pre>
+						</div>
+					</div>
+					<aside class="notes">
+						<ul>
+							<li>Selectors - what they are</li>
+						</ul>
+					</aside>
+				</section>
+				
+
+
+				<!-- 
+					===========================================================
+					AGENDA + code
+				-->
+				<section class="no-nesting has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+					<div class="cols-1-3 align-center">
+						<div class="agenda">
+							<h1>Agenda</h1>
+							<ul>
+								<li>Demos</li>
+								<li class="current-fragment">Selectors</li>
+								<li>Attributes</li>
+								<li>View and Scroll</li>
+								<li>Q&amp;A</li>
+							</ul>
+						</div>
+						<div>
+							<pre><code>
+.agenda ul {
+	font-style: italic;
+}
+li.current {
+	font-weight: bold;
+}
+							</code></pre>
+						</div>
+					</div>
+					<aside class="notes">
+						<ul>
+							<li>How lots of folk write code</li>
 						</ul>
 					</aside>
 				</section>
@@ -96,29 +219,67 @@
 					nesting1
 				-->
 				<section class="nesting1 has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
-					<div class="cols-2">
+					<div class="cols-1-3 align-center">
 						<div class="agenda">
-							<h1>Agenda</h1>
+							<h1>Nesting</h1>
 							<ul>
-								<li class="fragment custom ftd25">Demo LOADS of CSS</li>
-								<li class="fragment custom ftd25">Selectors</li>
-								<li class="fragment custom ftd25">Text bits</li>
-								<li class="fragment custom ftd25">Not-so-strictly-css</li>
-								<li class="fragment custom ftd25">View and Scroll</li>
-								<li class="fragment custom ftd25">Q&amp;A</li>
+								<li>Demos</li>
+								<li class="current-fragment">Selectors</li>
+								<li>Attributes</li>
+								<li>View and Scroll</li>
+								<li>Q&amp;A</li>
 							</ul>
 						</div>
-						<pre><code>
-<ul>
-	<li>Demo LOADS of CSS</li>
-	<li class="active">Selectors</li>
-	<li>Text bits</li>
-	<li>Not-so-strictly-css</li>
-	<li>View and Scroll</li>
-	<li class="fragment">Q&amp;A</li>
-</ul>
+						<pre class="padding"><code>
+.agenda {
+	font-style: italic;
+	.current {
+			font-weight: bold;
+	}
+}
 							</code></pre>
 						</div>
+					<aside class="notes">
+						<ul>
+							<li>Keeps code together</li>
+						</ul>
+					</aside>
+				</section>
+
+
+
+				<!-- 
+					===========================================================
+					nesting2a
+				-->
+				<section class="nesting2a has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+					<div class="cols-1-3 align-center">
+						<div class="agenda">
+							<h1>Nesting</h1>
+							<ul>
+								<li>Demos</li>
+								<li class="current-fragment">Selectors</li>
+								<li>Attributes</li>
+								<li>View and Scroll</li>
+								<li>Q&amp;A</li>
+							</ul>
+						</div>
+						<div>
+							<pre class="padding"><code data-line-numbers>
+	.agenda li {
+		font-style: italic;
+		.current {
+				font-weight: bold;
+		}
+	}
+
+	/** equates to  */
+	.agenda li .current {
+		font-weight: bold;
+	}
+								</code></pre>
+						</div>
+					</div>
 					<aside class="notes">
 						<ul>
 							<li></li>
@@ -133,28 +294,97 @@
 					nesting2
 				-->
 				<section class="nesting2 has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
-					<div class="cols-2">
+					<div class="cols-1-3 align-center">
 						<div class="agenda">
-							<h1>Agenda</h1>
+							<h1>& selector</h1>
 							<ul>
-								<li class="fragment custom ftd25">Demo LOADS of CSS</li>
-								<li class="fragment custom ftd25">Selectors</li>
-								<li class="fragment custom ftd25">Text bits</li>
-								<li class="fragment custom ftd25">Not-so-strictly-css</li>
-								<li class="fragment custom ftd25">View and Scroll</li>
-								<li class="fragment custom ftd25">Q&amp;A</li>
+								<li>Demos</li>
+								<li class="current-fragment">Selectors</li>
+								<li>Attributes</li>
+								<li>View and Scroll</li>
+								<li>Q&amp;A</li>
 							</ul>
 						</div>
 						<div>
-							<pre><code>
-<ul>
-	<li>Demo LOADS of CSS</li>
-	<li class="active">Selectors</li>
-	<li>Text bits</li>
-	<li>Not-so-strictly-css</li>
-	<li>View and Scroll</li>
-	<li class="fragment">Q&amp;A</li>
-</ul>
+							<pre class="padding"><code class="language-css" data-line-numbers="0|4,9-12">
+	.agenda li {
+		font-style: italic;
+		&.current {
+				font-weight: bold;
+		}
+	}
+
+	/** equates to  */
+	.agenda li.current {
+		font-weight: bold;
+	}
+								</code></pre>
+						</div>
+					</div>
+					<aside class="notes">
+						<ul>
+							<li></li>
+						</ul>
+					</aside>
+				</section>
+
+
+
+
+				<!-- 
+					===========================================================
+					is
+				-->
+				<section class="is1 has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+					<div class="cols-1-3 align-center">
+						<div class="isDiv">
+							<h1>is()</h1>
+							<h2>An h2</h2>
+							<h3>An h3</h3>
+							<h4>An h4</h4>
+							<p>A paragraph</p>
+							<ul>
+								<li>List item 1</li>
+								<li>List item 2</li>
+							</ul>
+						</div>
+						<div>
+						</div>
+					</div>
+					<aside class="notes">
+						<ul>
+							<li></li>
+						</ul>
+					</aside>
+				</section>
+
+
+
+
+				<!-- 
+					===========================================================
+					is
+				-->
+				<section class="is1a has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+					<div class="cols-1-3 align-center">
+						<div class="isDiv">
+							<h1>is()</h1>
+							<h2>An h2</h2>
+							<h3>An h3</h3>
+							<h4>An h4</h4>
+							<p>A paragraph</p>
+							<ul>
+								<li>List item 1</li>
+								<li>List item 2</li>
+							</ul>
+						</div>
+						<div>
+							<pre class="padding"><code class="language-css">
+.special h2, .special h3, .special h4,
+.special h5, .special p, .special li  {
+	color: #896A31;
+	font-family: 'Courier New';
+}
 							</code></pre>
 						</div>
 					</div>
@@ -172,8 +402,8 @@
 					===========================================================
 					is
 				-->
-				<section class="is has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
-					<div class="cols-2">
+				<section class="is2 has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+					<div class="cols-1-3 align-center">
 						<div class="isDiv">
 							<h1>is()</h1>
 							<h2>An h2</h2>
@@ -181,25 +411,50 @@
 							<h4>An h4</h4>
 							<p>A paragraph</p>
 							<ul>
-								<li class="fragment custom ftd25">Demo LOADS of CSS</li>
+								<li>List item 1</li>
+								<li>List item 2</li>
 							</ul>
 						</div>
 						<div>
-							<pre><code>
-<ul>
-	<li>Demo LOADS of CSS</li>
-	<li class="active">Selectors</li>
-	<li>Text bits</li>
-	<li>Not-so-strictly-css</li>
-	<li>View and Scroll</li>
-	<li class="fragment">Q&amp;A</li>
-</ul>
+							<pre class="padding"><code class="language-css">
+.special :is(h2, h3, h4, p, li) {
+	color: #896A31;
+	font-family: 'Courier New';
+}
 							</code></pre>
 						</div>
 					</div>
 					<aside class="notes">
 						<ul>
-							<li></li>
+							<li>Also has. Allows us to select a parent based upon children</li>
+						</ul>
+					</aside>
+				</section>
+
+
+				<!-- 
+					===========================================================
+					marker0
+				-->
+				<section class="marker0 has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+					<div class="cols-1-3 align-center">
+						<div class="agenda">
+							<h1>Markers</h1>
+							<ul>
+								<li class="">Demo LOADS of CSS</li>
+								<li class="current-fragment">Selectors</li>
+								<li class="">Attributes</li>
+								
+								<li class="">View and Scroll</li>
+								<li class="">Q&amp;A</li>
+							</ul>
+						</div>
+						<div>
+						</div>
+					</div>
+					<aside class="notes">
+						<ul>
+							<li>Lots of hacks to style the list points</li>
 						</ul>
 					</aside>
 				</section>
@@ -210,28 +465,23 @@
 					marker1
 				-->
 				<section class="marker1 has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
-					<div class="cols-2">
+					<div class="cols-1-3 align-center">
 						<div class="agenda">
-							<h1>Agenda</h1>
+							<h1>Markers</h1>
 							<ul>
 								<li class="">Demo LOADS of CSS</li>
-								<li class="fragment custom ftd25">Selectors</li>
-								<li class="">Text bits</li>
-								<li class="">Not-so-strictly-css</li>
+								<li class="current-fragment">Selectors</li>
+								<li class="">Attributes</li>
+								
 								<li class="">View and Scroll</li>
 								<li class="">Q&amp;A</li>
 							</ul>
 						</div>
 						<div>
-							<pre><code>
-<ul>
-	<li>Demo LOADS of CSS</li>
-	<li class="active">Selectors</li>
-	<li>Text bits</li>
-	<li>Not-so-strictly-css</li>
-	<li>View and Scroll</li>
-	<li class="fragment">Q&amp;A</li>
-</ul>
+							<pre class="padding"><code>
+li::marker {
+	color: red;
+}
 							</code></pre>
 						</div>
 					</div>
@@ -249,34 +499,31 @@
 					marker2
 				-->
 				<section class="marker2 has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
-					<div class="cols-2">
+					<div class="cols-1-3 align-center">
 						<div class="agenda">
-							<h1>Agenda</h1>
+							<h1>Markers</h1>
 							<ul>
 								<li class="">Demo LOADS of CSS</li>
-								<li class="fragment custom ftd25">Selectors</li>
-								<li class="">Text bits</li>
-								<li class="">Not-so-strictly-css</li>
+								<li class="current-fragment">Selectors</li>
+								<li class="">Attributes</li>
+								
 								<li class="">View and Scroll</li>
 								<li class="">Q&amp;A</li>
 							</ul>
 						</div>
 						<div>
-							<pre><code>
-<ul>
-	<li>Demo LOADS of CSS</li>
-	<li class="active">Selectors</li>
-	<li>Text bits</li>
-	<li>Not-so-strictly-css</li>
-	<li>View and Scroll</li>
-	<li class="fragment">Q&amp;A</li>
-</ul>
+							<pre class="padding"><code>
+li::marker {
+	content: "🧡 ";
+}
 							</code></pre>
 						</div>
 					</div>
 					<aside class="notes">
 						<ul>
-							<li></li>
+							<li>List of cases</li>
+							<li>Could be an icon based upon status</li>
+							<li>Country flags</li>
 						</ul>
 					</aside>
 				</section>
@@ -288,38 +535,83 @@
 					marker3
 				-->
 				<section class="marker3 has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
-					<div class="cols-2">
+					<div class="cols-2 align-center">
 						<div class="agenda">
 							<h1>Marker + Counter</h1>
-							<div class="fragment">
+							<div>
 								<h3>Nesting</h3>
 								<p>We spoke about various ways to nest</p>
 							</div>
-							<div class="fragment">
+							<div>
 								<h3>is() &amp; :has()</h3>
 								<p>Powerful selectors</p>
 							</div>
-							<div class="fragment">
+							<div>
 								<h3>::marker &amp; counter()</h3>
 								<p>More powerful stuff</p>
 							</div>
 						</div>
-						<div>
-							<pre><code>
-<ul>
-	<li>Demo LOADS of CSS</li>
-	<li class="active">Selectors</li>
-	<li>Text bits</li>
-	<li>Not-so-strictly-css</li>
-	<li>View and Scroll</li>
-	<li class="fragment">Q&amp;A</li>
-</ul>
+						<div class="fragment">
+							<pre class="padding"><code  class="language-css">
+h3 {
+	counter-increment: h3;
+	display: list-item;
+	list-style-position: inside;
+}
+
+h3::marker {
+	content: "#" counter(h3) " ";
+	color: #896A31;
+}
 							</code></pre>
 						</div>
 					</div>
 					<aside class="notes">
 						<ul>
-							<li></li>
+							<li>Documentation pages!!</li>
+							<li>Can use within functions</li>
+					</aside>
+				</section>
+
+
+
+				<!-- 
+					===========================================================
+					siblingcounter
+				-->
+				<section class="siblingcounter1 has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+					<h1>Animations?</h1>
+					<div class="cols-1-3 align-center">
+						<div class="agenda">
+							<ul class="siblingcounter1">
+								<li class="ftd25">Demo</li>
+								<li class="">Selectors</li>
+								<li class="ftd25">Attributes</li>
+								<li class="ftd25">View and Scroll</li>
+								<li class="ftd25">Q&amp;A</li>
+							</ul>
+						</div>
+						<div class="fragment">
+							<pre class=""><code  class="language-css">
+.agenda li {
+	animation: reveal 0.6s ease-out forwards;
+}
+@keyframes reveal {
+	from {
+			opacity: 0;
+			transform: translateY(100px);
+	}
+	to {
+			opacity: 1;
+			transform: translateY(0);
+	}
+}
+							</code></pre>
+						</div>
+					</div>
+					<aside class="notes">
+						<ul>
+							<li>Add some snomations</li>
 						</ul>
 					</aside>
 				</section>
@@ -330,21 +622,25 @@
 					===========================================================
 					siblingcounter
 				-->
-				<section class="siblingcounter has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
-					<div class="cols-2">
+				<section class="siblingcounter2 has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+					<h1>sibling-index()</h1>
+					<div class="cols-1-3 align-center">
 						<div class="agenda">
-							<h1>Agenda</h1>
-							<ul>
-								<li class="ftd25">Demo LOADS of CSS</li>
-								<li class="fragment custom ftd25">Selectors</li>
-								<li class="ftd25">Text bits</li>
-								<li class="ftd25">Not-so-strictly-css</li>
+							<ul class="siblingcounter2">
+								<li class="ftd25">Demos</li>
+								<li class="">Selectors</li>
+								<li class="ftd25">Attributes</li>
 								<li class="ftd25">View and Scroll</li>
 								<li class="ftd25">Q&amp;A</li>
 							</ul>
 						</div>
-						<div>
-
+						<div class="fragment">
+								<pre class=""><code  class="language-css">
+.agenda li {
+	animation: reveal 0.6s ease-out forwards;
+	animation-delay: calc(sibling-index() * 0.5s);
+}
+								</code></pre>
 						</div>
 					</div>
 					<aside class="notes">
@@ -363,7 +659,7 @@
 				<section class="user-invalid has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
 					<h1>Better invalids?</h1>
 					&nbsp;
-					<div class="cols-2">
+					<div class="cols-2 align-center">
 						<div class="invalid agenda fragment">
 							<label for="email">Enter your test.com email:</label>
 							<input type="email" id="email" pattern=".+@test\.com" size="30" required />
@@ -417,7 +713,7 @@ div:has(:user-invalid) {
 				<section class="field-sizing has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
 					<h1>field-sizing</h1>
 					&nbsp;
-					<div class="cols-2">
+					<div class="cols-2 align-center">
 						<div class="">
 							<fieldset>
 								<legend>Default</legend>
@@ -435,7 +731,7 @@ div:has(:user-invalid) {
 							</fieldset>
 						</div>
 						<div class="">
-							<fieldset class="fragment field-sizing-sized">
+							<fieldset class="fragment field-sizing-sized" data-fragment-index="1">
 								<legend>Sized</legend>
 								<div class="row">
 										<input id="text2" type="email" placeholder="email input">
@@ -451,9 +747,21 @@ div:has(:user-invalid) {
 							</fieldset>
 						</div>
 					</div>
+					<div class="cols-2">
+						<div></div>
+						<div>
+
+					<pre class="fragment" data-fragment-index="1"><code  class="language-css">
+.field-sizing-sized :is(input){
+	field-sizing: content;
+	min-inline-size: 20ch;
+}
+														</code></pre>
+						</div>
+					</div>
 					<aside class="notes">
 						<ul>
-							<li></li>
+							<li>Sensible min / max</li>
 						</ul>
 					</aside>
 				</section>
@@ -469,7 +777,7 @@ div:has(:user-invalid) {
 				<section class="accent-color1 has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
 					<h1>Styling Forms 🤬</h1>
 					&nbsp;
-					<div class="cols-2">
+					<div class="cols-2 align-center">
 						<div class="">
 							<fieldset>
 								<legend>Checkboxes</legend>
@@ -482,7 +790,7 @@ div:has(:user-invalid) {
 								<div class="row fragment custom accent" data-fragment-index="1">
 									<input id="checkbox2" type="checkbox">
 									<label for="checkbox2">
-										Accent
+										accent-color
 									</label>
 								</div>
 							</fieldset>
@@ -498,7 +806,7 @@ div:has(:user-invalid) {
 								<div class="row fragment custom accent" data-fragment-index="1">
 									<input name="radio" id="radio2" type="radio" class="accent">
 									<label for="radio">
-										Accent
+										accent-color
 									</label>
 								</div>
 							</fieldset>
@@ -515,7 +823,7 @@ div:has(:user-invalid) {
 								<div class="row fragment custom accent" data-fragment-index="1">
 									<progress id="progress-accent" class="accent" min="0" max="100" value="33"></progress>
 									<label for="progress-accent">
-										Accent
+										accent-color
 									</label>
 								</div>
 							</fieldset>
@@ -531,7 +839,7 @@ div:has(:user-invalid) {
 								<div class="row fragment custom accent" data-fragment-index="1">									
 									<input id="range-accent" type="range">
 									<label for="range-accent">
-										Accent
+										accent-color
 									</label>
 								</div>
 							</fieldset>
@@ -552,11 +860,48 @@ div:has(:user-invalid) {
 				-->
 				<section class="property1 has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
 					<h1>@Property</h1>
-					<div class="cols-2">
+					<h2>Type safe CSS variables</h2>
 						<div class="">
-
+<pre class="padding" data-fragment-index="1"><code  class="language-css"  data-line-numbers="0|2-6|11">
+	@property --focal-size {
+		syntax: '&lt;length-percentage&gt;';
+		initial-value: 100%;
+		inherits: false;
+	}
+	
+	focus-zoom {
+		mask-image: radial-gradient(
+				circle at var(--mouse-x) var(--mouse-y), 
+				transparent var(--focal-size), 
+				black 0%
+		);
+	}
+															</code></pre>
 						</div>
-					</div>
+					<aside class="notes">
+						<ul>
+							<li>Type safe</li>
+							<li>Linters should pick up on this</li>
+							<li>Chrome extension</li>
+						</ul>
+					</aside>
+				</section>
+
+				<!-- 
+					===========================================================
+					property1
+				-->
+				<section class="property1 has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+					<h1>@Property</h1>
+					<h2>Type safe CSS variables</h2>
+						<div class="">
+<pre class="" data-fragment-index="1"><code  class="language-javascript">
+zoom.style.setProperty('--focal-size', '4rem');
+
+
+zoom.style.setProperty('--focal-size', '100%');
+															</code></pre>
+						</div>
 					<aside class="notes">
 						<ul>
 							<li></li>
@@ -582,13 +927,71 @@ div:has(:user-invalid) {
 							<p>So far so good... we've seen a lot, but I hope you're taking in just how much CSS has come along.</p>
 							<p>There is a lot on offer, and it's time we started making use of it and love it.</p>
 						</div>
-						<div class="fragment balance">
+					</div>
+					<aside class="notes">
+						<ul>
+							<li></li>
+						</ul>
+					</aside>
+				</section>
+
+				
+
+
+
+				<!-- 
+					===========================================================
+					textwrap-1
+				-->
+				<section class="textwrap-1 has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+					<h1>text-wrap: balance</h1>
+					&nbsp;
+					<div class="cols-3">
+						<div class="standard">
+							<h2>Default</h2>
+							<h3>The top modern CSS features every dev needs to know</h3>
+							<p>So far so good... we've seen a lot, but I hope you're taking in just how much CSS has come along.</p>
+							<p>There is a lot on offer, and it's time we started making use of it and love it.</p>
+						</div>
+						<div class=" balance">
 							<h2>Balance</h2>
 							<h3>The top modern CSS features every dev needs to know</h3>
 							<p>So far so good... we've seen a lot, but I hope you're taking in just how much CSS has come along.</p>
 							<p>There is a lot on offer, and it's time we started making use of it and love it.</p>
 						</div>
-						<div class="fragment pretty">
+					</div>
+					<aside class="notes">
+						<ul>
+							<li>News sites, columned layouts</li>
+						</ul>
+					</aside>
+				</section>
+
+				
+
+
+
+				<!-- 
+					===========================================================
+					textwrap-1
+				-->
+				<section class="textwrap-1 has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+					<h1>text-wrap: pretty</h1>
+					&nbsp;
+					<div class="cols-3">
+						<div class="standard">
+							<h2>Default</h2>
+							<h3>The top modern CSS features every dev needs to know</h3>
+							<p>So far so good... we've seen a lot, but I hope you're taking in just how much CSS has come along.</p>
+							<p>There is a lot on offer, and it's time we started making use of it and love it.</p>
+						</div>
+						<div class="balance">
+							<h2>Balance</h2>
+							<h3>The top modern CSS features every dev needs to know</h3>
+							<p>So far so good... we've seen a lot, but I hope you're taking in just how much CSS has come along.</p>
+							<p>There is a lot on offer, and it's time we started making use of it and love it.</p>
+						</div>
+						<div class="pretty">
 							<h2>Pretty</h2>
 							<h3>The top modern CSS features every dev needs to know</h3>
 							<p>So far so good... we've seen a lot, but I hope you're taking in just how much CSS has come along.</p>
@@ -597,7 +1000,7 @@ div:has(:user-invalid) {
 					</div>
 					<aside class="notes">
 						<ul>
-							<li></li>
+							<li>Subtle, no orphans</li>
 						</ul>
 					</aside>
 				</section>
@@ -611,81 +1014,55 @@ div:has(:user-invalid) {
 					animation-view
 				-->
 				<section class="animation-view has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
-					<h1>scroll() animations</h1>
+					<h1>view() animations</h1>
 					&nbsp;
 					<div class="vertical-scroll">
 						<div class="card">
-							<h2>Card title 1</h2>
-							<p>Here we have some content in a card.</p>
+							<h2>Different from scroll() animations</h2>
+							<p>View animations are based upon the elements visibility inside the nearest ancestor.</p>
 						</div>
 						<div class="card">
-							<h2>Card title 2</h2>
-							<p>This could be anything really.</p>
+							<h2>Animation timelines</h2>
+							<p>Elements have anonymous view progress timeline to animate.</p>
 						</div>
 						<div class="card">
-							<h2>Card title 3</h2>
-							<p>It could be text, images, videos... anything really</p>
+							<h2>Horizontal or vertical</h2>
+							<p>Timelines can be defined upon the horizontal or vertical axis</p>
 						</div>
-						<pre class="card"><code>// Even some code
-console.log("wow");
+						<pre class="card"><code class="language-css">
+.card {
+	animation-timeline: view();
+	animation-name: scale;
+}
+						</code></pre>
+						<pre class="card"><code class="language-css">
+@keyframes scale {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+	70% {
+		transform: scale(1);
+		opacity: 1;
+	}
+	100% {
+			transform: scale(0.8);
+			opacity: 0;
+		}
+}
 						</code></pre>
 						<div class="card">
-							<h2>Card title 5</h2>
-							<p>It could be text, images, videos... anything really</p>
+							<h2>Items can have their own keyframes</h2>
+							<p>What happens next?</p>
 						</div>
 						<div class="card">
-							<h2>Card title 6</h2>
-							<p>It could be text, images, videos... anything really</p>
+							<h2>We can do some really silly stuff</h2>
+							<p>With great power comes great responsibility.</p>
 						</div>
 						<div class="card">
-							<h2>Card title 7</h2>
-						</div>
-					</div>
-					<aside class="notes">
-						<ul>
-							<li></li>
-						</ul>
-					</aside>
-				</section>
-
-				
-
-
-
-				<!-- 
-					===========================================================
-					animation-view
-				-->
-				<section class="scroll-snap has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
-					<h1>Scroll snapping</h1>
-					&nbsp;
-					<div class="horiz-scroll">
-						<div class="card">
-							<h2>Card title 1</h2>
-							<p>Here we have some content in a card.</p>
-						</div>
-						<div class="card">
-							<h2>Card title 2</h2>
-							<p>This could be anything really.</p>
-						</div>
-						<div class="card">
-							<h2>Card title 3</h2>
-							<p>It could be text, images, videos... anything really</p>
-						</div>
-						<div class="card">
-						<pre><code>// Even some code
-console.log("wow");
-						</code></pre></div>
-						<div class="card">
-							<h2>Card title 5</h2>
-							<p>It could be text, images, videos... anything really</p>
-						</div>
-						<div class="card">
-							<h2>Card title 6</h2>
-							<p>It could be text, images, videos... anything really</p>
-						</div>
-						<div class="card">
-							<h2>Card title 7</h2>
+							<h2>In Salesforce?</h2>
+							<p>It would be fun to see these in use in Salesforce.</p>
+							<p>Can you imagine your boss' face when things start flying around?</p>
 						</div>
 					</div>
 					<aside class="notes">
@@ -694,9 +1071,6 @@ console.log("wow");
 						</ul>
 					</aside>
 				</section>
-
-				
-
 
 
 				<!-- 
@@ -704,35 +1078,40 @@ console.log("wow");
 					animation-view
 				-->
 				<section class="scroll-snap2 has-footer has-header" data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
-					<h1>Scroll snapping2</h1>
+					<h1>Scroll snapping</h1>
 					&nbsp;
 					<div class="horiz-scroll">
 						<div class="card">
-							<h2>Card title 1</h2>
-							<p>Here we have some content in a card.</p>
+							<h2>View animations can be functional too</h2>
+							<p>They're not just for eye-candy</p>
 						</div>
 						<div class="card">
-							<h2>Card title 2</h2>
-							<p>This could be anything really.</p>
+							<h2>Introducing scroll-snap</h2>
+							<p>Allows us to control the anchoring of elements.</p>
+							<p>It's wonderfully simple to implement too, which is always nice.</p>
 						</div>
+						<pre class="card padding"><code>scroll-snap-type: x mandatory;
+						</code></pre>
+						<pre class="card"><code>@keyframes snap {
+	0% {
+		opacity: 0;
+		transform:  scale(0);
+	}
+	50% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+			opacity: 0;
+			transform: scale(0);
+	}
+}</code></pre>
 						<div class="card">
-							<h2>Card title 3</h2>
+							<h2>You could animate anything</h2>
 							<p>It could be text, images, videos... anything really</p>
 						</div>
 						<div class="card">
-						<pre><code>// Even some code
-console.log("wow");
-						</code></pre></div>
-						<div class="card">
-							<h2>Card title 5</h2>
-							<p>It could be text, images, videos... anything really</p>
-						</div>
-						<div class="card">
-							<h2>Card title 6</h2>
-							<p>It could be text, images, videos... anything really</p>
-						</div>
-						<div class="card">
-							<h2>Card title 7</h2>
+							<h2>Enough scrolling?</h2>
 						</div>
 					</div>
 					<aside class="notes">
@@ -747,7 +1126,7 @@ console.log("wow");
 					===========================================================
 					NOT DOING THIS ALONE
 				-->
-				<section class="has-footer has-header"  data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
+				<!-- <section class="has-footer has-header"  data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)">
 					<h1>We're not doing this alone</h1>
 				</section>
 				<section class="fullvideo" class="fullvideo"
@@ -758,9 +1137,27 @@ console.log("wow");
 							<li></li>
 						</ul>
 					</aside>					
+				</section> -->
+
+				<!-- 
+					===========================================================
+					Summary
+				-->
+				<section class="has-footer has-header"  
+
+data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)" >
+					<h1>In summary</h1>
+					<ul>
+						<li>The web is continually moving.</li>
+						<li>We can enrich users' experiences.</li>
+						<li>We can write more accessible, maintainable code.</li>
+					</ul>
+					<aside class="notes">
+						<ul>
+							<li></li>
+						</ul>
+					</aside>
 				</section>
-
-
 
 				<!-- 
 					===========================================================
@@ -773,7 +1170,8 @@ data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)" >
 					<img id="resource-bitly" class="screenshot" src="assets/imgs/bit.ly_VsCodeFTD24.png" />
 					<ul>
 						<li>These slides<a target="_blank" href="https://toddhalfpenny.com/slides/ftd25" class="href">toddhalfpenny.com/slides/ftd25</a></li>
-						<li>VS Code Docs<a target="_blank"  class="href" href="">...</a></li>
+						<li>CSS Tricks<a target="_blank"  class="href" href="https://css-tricks.com/">css-tricks.com</a></li>
+						<li>25 new & rad feature of CSS - CascadiaJS<a target="_blank"  class="href" href="https://youtu.be/QW6GECIzvsw/">youtu.be/QW6GECIzvsw</a></li>
 					</ul>
 					<aside class="notes">
 						<ul>
@@ -808,7 +1206,7 @@ data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)" >
 			</div>
 		</div>
 
-		<focus-zoom></focus-zoom>
+		<!-- <focus-zoom></focus-zoom> -->
 
 		<script src="dist/reveal.js"></script>
 		<script src="plugin/notes/notes.js"></script>
@@ -823,7 +1221,7 @@ data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)" >
 				center: false,
 				//maxScale: 1.8,
 				//margin: 0.18, // Reduced this for NAD as they have a slide background
-				margin: 0,
+				margin: 0.05,
 				progress: false,
 				width: 1920,
 				height: 1200,
@@ -861,10 +1259,15 @@ data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)" >
 						el.classList.remove('slide-title');
 					};
 				}
-				if (event.currentSlide.className.includes('siblingcounter')) {
-					startAnimation();
+				if (event.currentSlide.className.includes('siblingcounter1')) {
+					startAnimation1();
 				} else {
-					removeAnimation();
+					removeAnimation1();
+				}
+				if (event.currentSlide.className.includes('siblingcounter2')) {
+					startAnimation2();
+				} else {
+					removeAnimation2();
 				}
 			} );
 
@@ -908,13 +1311,24 @@ data-background-gradient="linear-gradient(to bottom, #78B3ED, #D4F7FF)" >
 				el.classList.add("hide-background");
 			}
 
-			function startAnimation() {
+			function startAnimation1() {
+				console.log("startAnimation1");
 				let el = document.getElementById('slides');
-				el.classList.add("start-animation");
+				el.classList.add("start-animation1");
 			}
-			function removeAnimation() {
+
+			function startAnimation2() {
+				console.log("startAnimation2");
 				let el = document.getElementById('slides');
-				el.classList.remove("start-animation");
+				el.classList.add("start-animation2");
+			}
+			function removeAnimation1() {
+				let el = document.getElementById('slides');
+				el.classList.remove("start-animation1");
+			}
+			function removeAnimation2() {
+				let el = document.getElementById('slides');
+				el.classList.remove("start-animation2");
 			}
 
 			const zoom = document.querySelector('focus-zoom');

@@ -124,6 +124,14 @@ img#todd {
     top: 30%;
     max-width: 25%;
 }
+img#linktree {
+    // border-radius: 50%;
+    position: absolute;
+    aspect-ratio: 1;
+    left: 80%;
+    top: 55%;
+    max-width: 10%;
+}
 
 .reveal section ul {
     line-height: 2;
@@ -131,6 +139,9 @@ img#todd {
     list-style: none;
 }
 
+.align-center {
+    align-items: center;
+}
 .cols-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -232,7 +243,7 @@ text-align: left;
     font-size: 1.3em;
 }
 .reveal h1 + h2 {
-margin-top: -0.5em;
+margin-top: -0em;
 font-size: 1.3em;
 }
 .reveal h3 {
@@ -262,7 +273,8 @@ font-size: 1.3em;
     border-radius: 0.5em;
     font-size: 0.7em;
     margin: 0 auto;
-    height: 800px;
+    min-height: calc-size(auto, calc(size + 50px));
+    height: 500px;
 }
 .reveal pre code {
     border-radius: 0.5em;
@@ -340,11 +352,20 @@ hr {
     margin: 0 0 0 1em;
     max-width: 37%;
 }
-#take-things-further-01 pre,
-#invoice-web-service pre,
-#invoice-target-xml pre,
-#invoice-dw-script pre {
-    height: 570px;
+.nesting2a pre, 
+.nesting2 pre, 
+.marker3 pre,
+.property1 pre    {
+    height: 800px;
+}
+.siblingcounter1 pre {
+    height: 750px;
+}   
+.scroll-snap pre {
+    height: 300px !important;
+} 
+.scroll-snap2 pre.card {
+    padding-bottom: 2.8em;
 }
 img.screenshot {
     box-shadow: var(--accent) 5px 8px 35px;
@@ -450,6 +471,16 @@ ul.qanda {
 //  max-height: 82px;
 }
 
+.why1 {
+    .cols-2 {
+        margin-top: 1em;
+        text-align: center;
+    }
+    img {
+        border-radius: 0.5em;
+        max-height: 70%;
+    }
+}
 
 /**
  ALL MY DEMO CODE
@@ -465,6 +496,16 @@ ul.qanda {
     list-style-type: disc;
 } 
 
+// BASIC AGENDA - NO NESTING
+.no-nesting {
+    .agenda ul {
+        font-style: italic;
+    }
+    li.current-fragment {
+        font-weight: bold;
+    }
+}
+
 .nesting1 {   // basic nesting
     .agenda {
         font-style: italic;
@@ -474,8 +515,22 @@ ul.qanda {
     }
 }
 
+.nesting2a {   // & nesting
+    h1 {
+        min-width: max-content;
+    }
+    .agenda li {
+        font-style: italic;
+        .current-fragment {
+            font-weight: bold;
+        }
+    }
+}
 
 .nesting2 {   // & nesting
+    h1 {
+        min-width: max-content;
+    }
     .agenda li {
         font-style: italic;
         &.current-fragment {
@@ -483,17 +538,27 @@ ul.qanda {
         }
     }
 }
-
-.reveal .is {
+.reveal .is1 {
+    h2 {
+        margin-top: 1em;
+    }
+}
+.reveal :is(.is1a, .is2) {
     h2 {
         margin-top: 1em;
     }
     .isDiv :is(h2, h3, h4, p, li) {
         color: #896A31;
+        font-family: 'Courier New', Courier, monospace;
     }
 }
 
 
+.marker0 {   // marker
+    .agenda li {
+        font-style: italic;
+    }
+}
 
 .marker1 {   // marker
     .agenda li {
@@ -522,8 +587,10 @@ ul.qanda {
     }
 }
 
-
 .reveal .marker3 {   // marker counter
+    h3 {
+        margin-top: 0.5em;
+    }
     counter-reset: h3;
 
     h3 {
@@ -533,19 +600,23 @@ ul.qanda {
     }
     
     h3::marker {
-        display: list-item;
+        // display: list-item;
         content: "#" counter(h3) " ";
         color: #896A31;
-        font-weight: bold;
     }
 }
 
 
-.siblingcounter li {
+.siblingcounter1 li, .siblingcounter2 li  {
     opacity: 0;
 }
 
-.start-animation  ul li {
+.start-animation1  ul.siblingcounter1 li {
+  animation: reveal 0.6s ease-out forwards;
+  animation-delay: 2s;
+}
+
+.start-animation2  ul.siblingcounter2 li {
   animation: reveal 0.6s ease-out forwards;
   animation-delay: calc(sibling-index() * 0.5s);
 }
@@ -758,7 +829,7 @@ focus-zoom {
     animation-duration: 1ms; /* Required in Firefox */
     z-index:9999
   }
-.card:nth-of-type(4) {
+.card:nth-of-type(5) {
     animation-name: spin;
 }
 div.card:last-of-type {
